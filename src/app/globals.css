@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ============================
+   MARVEL MULTIVERSE TRACKER
+   Premium Dark Cinematic Theme
+   ============================ */
+
+@theme {
+  --color-marvel-red: #EC1D24;
+  --color-doom-green: #00FF6A;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-hover: rgba(255, 255, 255, 0.06);
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+}
+
+/* --- Base --- */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #08080A;
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* --- Selection --- */
+::selection {
+  background: rgba(236, 29, 36, 0.4);
+  color: white;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Glass Panels --- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-solid {
+  background: rgba(16, 16, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* --- Navbar glass --- */
+.navbar-glass {
+  background: rgba(8, 8, 10, 0.8);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+/* --- Filter bar glass --- */
+.filter-bar-glass {
+  background: rgba(8, 8, 10, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* --- Ambient background --- */
+.ambient-bg {
+  transition: background 1.5s ease-in-out;
+}
+
+/* --- Doom countdown glow lines --- */
+.doom-glow-line {
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 106, 0.4), transparent);
+  animation: doom-pulse 3s ease-in-out infinite;
+}
+
+@keyframes doom-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* --- Ken Burns effect for backdrop images --- */
+.ken-burns {
+  animation: ken-burns 30s ease-in-out infinite alternate;
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1) translateX(0); }
+  100% { transform: scale(1.1) translateX(-2%); }
+}
+
+/* --- Rating Slider --- */
+.rating-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--slider-color, rgba(255,255,255,0.3)) 0%,
+    var(--slider-color, rgba(255,255,255,0.3)) var(--slider-progress, 0%),
+    rgba(255, 255, 255, 0.08) var(--slider-progress, 0%),
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.rating-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid var(--slider-color, rgba(255,255,255,0.5));
+  box-shadow: 0 0 8px var(--slider-color, rgba(255,255,255,0.3));
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.rating-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 16px var(--slider-color, rgba(255,255,255,0.5));
+}
+
+.rating-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid var(--slider-color, rgba(255,255,255,0.5));
+  box-shadow: 0 0 8px var(--slider-color, rgba(255,255,255,0.3));
+}
+
+/* --- Focus visible --- */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid rgba(236, 29, 36, 0.6);
+  outline-offset: 2px;
+}
+
+/* --- Scrollbar hide utility --- */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

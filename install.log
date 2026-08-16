@@ -1,0 +1,56 @@
+npm verbose cli /usr/local/bin/node /usr/local/bin/npm
+npm info using npm@11.16.0
+npm info using node@v24.18.0
+npm verbose title npm install
+npm verbose argv "install" "--loglevel" "verbose"
+npm verbose logfile logs-max:10 dir:/Users/migarawijewardana/WEBSITE/MArvel/.npm-cache/_logs/2026-08-11T17_06_14_321Z-
+npm verbose logfile /Users/migarawijewardana/WEBSITE/MArvel/.npm-cache/_logs/2026-08-11T17_06_14_321Z-debug-0.log
+npm http fetch GET 200 https://registry.npmjs.org/next 588ms (cache revalidated)
+npm http fetch GET 200 https://registry.npmjs.org/@opentelemetry%2fapi 4062ms (cache revalidated)
+npm http fetch GET 200 https://registry.npmjs.org/@playwright%2ftest 941ms (cache revalidated)
+npm http fetch GET 200 https://registry.npmjs.org/babel-plugin-react-compiler 19ms (cache revalidated)
+npm http fetch GET 200 https://registry.npmjs.org/react 493ms (cache revalidated)
+npm http fetch GET 200 https://registry.npmjs.org/react-dom 36ms (cache revalidated)
+npm http cache https://registry.npmjs.org/sass 5ms (cache hit)
+npm http cache https://registry.npmjs.org/framer-motion 11ms (cache hit)
+npm http cache https://registry.npmjs.org/@emotion%2fis-prop-valid 8ms (cache hit)
+npm http cache https://registry.npmjs.org/firebase 23ms (cache hit)
+npm http cache https://registry.npmjs.org/typescript 16ms (cache hit)
+npm http cache https://registry.npmjs.org/@types%2freact 4ms (cache hit)
+npm http cache https://registry.npmjs.org/@types%2freact-dom 2ms (cache hit)
+npm http cache https://registry.npmjs.org/@types%2fnode 12ms (cache hit)
+npm http cache https://registry.npmjs.org/@tailwindcss%2fpostcss 4ms (cache hit)
+npm http fetch GET 200 https://registry.npmjs.org/tailwindcss 71664ms (cache miss)
+npm http cache https://registry.npmjs.org/@alloc%2fquick-lru 12ms (cache hit)
+npm http cache https://registry.npmjs.org/tailwindcss 21ms (cache hit)
+npm http cache https://registry.npmjs.org/undici-types 50ms (cache hit)
+npm http cache https://registry.npmjs.org/postcss 52ms (cache hit)
+npm http cache https://registry.npmjs.org/@tailwindcss%2fnode 55ms (cache hit)
+npm http fetch GET 200 https://registry.npmjs.org/@firebase%2fai 2860ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/csstype 3418ms (cache miss)
+npm http fetch GET https://registry.npmjs.org/@firebase%2futil attempt 1 failed with ECONNRESET
+npm http fetch GET https://registry.npmjs.org/@firebase%2futil attempt 2 failed with ECONNRESET
+npm http fetch GET 200 https://registry.npmjs.org/@firebase%2fapp-check 118153ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide 227234ms (cache miss)
+npm http cache https://registry.npmjs.org/@firebase%2fdata-connect 8ms (cache hit)
+npm http fetch GET 200 https://registry.npmjs.org/@firebase%2fapp-check-compat 29426ms (cache miss)
+npm http fetch GET https://registry.npmjs.org/@firebase%2fperformance-compat attempt 1 failed with ETIMEDOUT
+npm http cache https://registry.npmjs.org/tslib 4ms (cache hit)
+npm http cache https://registry.npmjs.org/motion-dom 3ms (cache hit)
+npm http cache https://registry.npmjs.org/motion-utils 2ms (cache hit)
+npm http cache https://registry.npmjs.org/@swc%2fhelpers 7ms (cache hit)
+npm http fetch GET 200 https://registry.npmjs.org/styled-jsx 74535ms (cache miss)
+npm http cache https://registry.npmjs.org/baseline-browser-mapping 3ms (cache hit)
+npm http cache https://registry.npmjs.org/sharp 3ms (cache hit)
+npm http fetch GET 200 https://registry.npmjs.org/@next%2fswc-linux-x64-musl 85826ms (cache miss)
+npm http cache https://registry.npmjs.org/@next%2fswc-linux-arm64-gnu 9ms (cache hit)
+npm http fetch GET 200 https://registry.npmjs.org/@firebase%2fmessaging-compat 406319ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@firebase%2fstorage-compat 612564ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@next%2fswc-linux-arm64-musl 92557ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@next%2fswc-win32-arm64-msvc 78982ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/scheduler 78716ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@next%2fenv 384728ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@next%2fswc-win32-x64-msvc 145804ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@next%2fswc-darwin-arm64 290906ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@firebase%2finstallations 936761ms (cache miss)
+npm http fetch GET 200 https://registry.npmjs.org/@next%2fswc-darwin-x64 503695ms (cache miss)

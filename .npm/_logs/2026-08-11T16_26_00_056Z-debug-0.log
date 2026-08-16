@@ -1,0 +1,53 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.16.0
+2 info using node@v24.18.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/migarawijewardana/WEBSITE/MArvel/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm install next@latest react@latest react-dom@latest typescript @types/react @types/react-dom @types/node framer-motion firebase
+7 verbose argv "install" "next@latest" "react@latest" "react-dom@latest" "typescript" "@types/react" "@types/react-dom" "@types/node" "framer-motion" "firebase"
+8 verbose logfile logs-max:10 dir:/Users/migarawijewardana/WEBSITE/MArvel/.npm/_logs/2026-08-11T16_26_00_056Z-
+9 verbose logfile /Users/migarawijewardana/WEBSITE/MArvel/.npm/_logs/2026-08-11T16_26_00_056Z-debug-0.log
+10 silly logfile done cleaning log files
+11 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with ENOTFOUND
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
+14 silly packumentCache corgi:https://registry.npmjs.org/react cache-miss
+15 silly packumentCache corgi:https://registry.npmjs.org/react-dom cache-miss
+16 http fetch GET https://registry.npmjs.org/next attempt 1 failed with ENOTFOUND
+17 http fetch GET https://registry.npmjs.org/react attempt 1 failed with ENOTFOUND
+18 http fetch GET https://registry.npmjs.org/react-dom attempt 1 failed with ENOTFOUND
+19 http fetch GET https://registry.npmjs.org/npm attempt 2 failed with ENOTFOUND
+20 http fetch GET https://registry.npmjs.org/next attempt 2 failed with ENOTFOUND
+21 http fetch GET https://registry.npmjs.org/react attempt 2 failed with ENOTFOUND
+22 http fetch GET https://registry.npmjs.org/react-dom attempt 2 failed with ENOTFOUND
+23 http fetch GET https://registry.npmjs.org/npm attempt 3 failed with ENOTFOUND
+24 http fetch GET https://registry.npmjs.org/next attempt 3 failed with ENOTFOUND
+25 http fetch GET https://registry.npmjs.org/react attempt 3 failed with ENOTFOUND
+26 http fetch GET https://registry.npmjs.org/react-dom attempt 3 failed with ENOTFOUND
+27 verbose type system
+28 verbose stack FetchError: request to https://registry.npmjs.org/next failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+28 verbose stack     at ClientRequest.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+28 verbose stack     at ClientRequest.emit (node:events:509:28)
+28 verbose stack     at emitErrorEvent (node:_http_client:109:11)
+28 verbose stack     at _destroy (node:_http_client:993:9)
+28 verbose stack     at onSocketNT (node:_http_client:1014:5)
+28 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+29 error code ENOTFOUND
+30 error syscall getaddrinfo
+31 error errno ENOTFOUND
+32 error network request to https://registry.npmjs.org/next failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+33 error network This is a problem related to network connectivity.
+33 error network In most cases you are behind a proxy or have bad network settings.
+33 error network
+33 error network If you are behind a proxy, please make sure that the 'proxy' config is set properly.  See: 'npm help config'
+34 silly unfinished npm timer reify 1786465560283
+35 silly unfinished npm timer reify:loadTrees 1786465560283
+36 silly unfinished npm timer idealTree:userRequests 1786465560286
+37 verbose cwd /Users/migarawijewardana/WEBSITE/MArvel
+38 verbose os Darwin 25.5.0
+39 verbose node v24.18.0
+40 verbose npm  v11.16.0
+41 verbose exit 1
+42 verbose code 1
+43 error A complete log of this run can be found in: /Users/migarawijewardana/WEBSITE/MArvel/.npm/_logs/2026-08-11T16_26_00_056Z-debug-0.log
