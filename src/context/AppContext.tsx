@@ -96,8 +96,18 @@ export function AppProvider({ children }: { children: ReactNode }) {
     if (authLoading) return;
 
     if (!user) {
-      // If signed out, reset user data to empty
-      setUserData({ watched: {}, ratings: {} });
+      // No account — load progress from localStorage
+      const LS_KEY = 'marvel-tracker-data';
+      try {
+        const raw = typeof window !== 'undefined' ? localStorage.getItem(LS_KEY) : null;
+        if (raw) {
+          const local = JSON.parse(raw);
+          setUserData(local);
+          if (!local.hasSeenOnboarding) {
+            setShowOnboardingModal(true);
+          }
+        }
+      } catch {}
       setIsLoading(false);
       return;
     }

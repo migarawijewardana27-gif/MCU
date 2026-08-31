@@ -14,12 +14,11 @@ import FilterBar from '@/components/FilterBar';
 import MediaGrid from '@/components/MediaGrid';
 import DetailModal from '@/components/DetailModal';
 import ParticleBackground from '@/components/ParticleBackground';
-import LoginPage from '@/components/LoginPage';
 import OnboardingModal from '@/components/OnboardingModal';
 
 export default function Home() {
   const [introComplete, setIntroComplete] = useState(false);
-  const { ambientColor, user, authLoading } = useAppContext();
+  const { ambientColor, authLoading } = useAppContext();
 
   const handleIntroComplete = useCallback(() => {
     setIntroComplete(true);
@@ -31,10 +30,6 @@ export default function Home() {
         <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
       </div>
     );
-  }
-
-  if (!user) {
-    return <LoginPage />;
   }
 
   return (
