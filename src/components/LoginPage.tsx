@@ -107,7 +107,19 @@ export default function LoginPage() {
           </div>
         )}
 
-        <p className="mt-8 text-xs text-white/30 leading-relaxed max-w-[280px] mx-auto">
+        <div className="mt-6 flex items-start gap-2.5 bg-white/[0.03] border border-white/5 rounded-xl p-3 text-left">
+          <svg className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <div>
+            <p className="text-[11px] text-white/50 leading-relaxed">
+              <span className="text-emerald-400/80 font-semibold">Your email stays private.</span>{' '}
+              We only use Google for sign-in — your email is never displayed or shared. You can also hide your identity after signing in.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-6 text-xs text-white/30 leading-relaxed max-w-[280px] mx-auto">
           Sign in to save your progress, track your watch history, and sync across all your devices.
         </p>
       </motion.div>

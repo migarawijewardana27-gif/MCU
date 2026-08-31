@@ -127,6 +127,7 @@ export async function saveUserData(data: UserData): Promise<void> {
       ratings: data.ratings,
       unlockedBadges: data.unlockedBadges || [],
       hasSeenOnboarding: data.hasSeenOnboarding || false,
+      hideEmail: data.hideEmail || false,
       updatedAt: new Date().toISOString(),
     }, { merge: true });
   } catch (error) {
@@ -158,6 +159,7 @@ export function subscribeToUserData(
           ratings: data.ratings || {},
           unlockedBadges: data.unlockedBadges || [],
           hasSeenOnboarding: data.hasSeenOnboarding || false,
+          hideEmail: data.hideEmail || false,
         };
         // Also sync to localStorage for backup/offline
         setLocalData(userData);
@@ -277,6 +279,15 @@ export async function markOnboardingComplete(currentData: UserData): Promise<Use
   const newData: UserData = {
     ...currentData,
     hasSeenOnboarding: true,
+  };
+  await saveUserData(newData);
+  return newData;
+}
+
+export async function toggleHideEmail(currentData: UserData, hide: boolean): Promise<UserData> {
+  const newData: UserData = {
+    ...currentData,
+    hideEmail: hide,
   };
   await saveUserData(newData);
   return newData;

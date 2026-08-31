@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import { UserData, RatingData, FilterState, TMDBData, MarvelTitle, AppTheme, THEMES } from '@/types';
-import { saveUserData, subscribeToUserData, updateWatchedStatus, updateWatchedEpisode, updateWatchedPostCredits, updateRating, getFirebaseAuth, isFirebaseConfigured, markOnboardingComplete } from '@/lib/firebase';
+import { saveUserData, subscribeToUserData, updateWatchedStatus, updateWatchedEpisode, updateWatchedPostCredits, updateRating, getFirebaseAuth, isFirebaseConfigured, markOnboardingComplete, toggleHideEmail } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { searchAndGetDetails } from '@/lib/tmdb';
 import { MARVEL_TITLES } from '@/data/marvelTitles';
@@ -36,6 +36,7 @@ interface AppContextType {
   showOnboardingModal: boolean;
   setShowOnboardingModal: (show: boolean) => void;
   completeOnboarding: () => void;
+  setHideEmail: (hide: boolean) => void;
 }
 
 const AppContext = createContext<AppContextType | null>(null);
@@ -249,6 +250,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setUserData(updated);
   }, [userData]);
 
+  const setHideEmail = useCallback(async (hide: boolean) => {
+    const updated = await toggleHideEmail(userData, hide);
+    setUserData(updated);
+  }, [userData]);
+
   return (
     <AppContext.Provider
       value={{
@@ -280,6 +286,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         showOnboardingModal,
         setShowOnboardingModal,
         completeOnboarding,
+        setHideEmail,
       }}
     >
       {children}

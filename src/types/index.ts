@@ -46,6 +46,7 @@ export interface UserData {
   ratings: Record<string, RatingData>;
   unlockedBadges?: string[];
   hasSeenOnboarding?: boolean;
+  hideEmail?: boolean;
 }
 
 export interface FilterState {
